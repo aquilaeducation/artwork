@@ -1,19 +1,60 @@
 <html>
-   <title>art in ar by aquila mixed reality</title>
-   <body oncontextmenu="return false">
-      <script> document.onkeydown = function(e) {if(event.keyCode == 123) { return false;}if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){return false;}if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){return false;}if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){return false;}</script> 
-      <style type="text/css"> .computerShow { display: none;} /* Computer Show */ @media only screen and (min-device-width : 500px){ .computerShow {display: inline;} } </style>
-      <div id ="android" style="display:none">
-         <div style="float: left;"> <img src="https://cdn.glitch.com/111e59b3-1763-4a17-8c7e-317b7588e0f4%2FARIcon.png?v=1624556468542" width="20" height="20" alt=”augmented reality shopping aquila mixed reality”> </div>
-         <a style="font-family:Montserrat; font-size:12px; color:black" href="intent://arvr.google.com/scene-viewer/1.0?file=https://github.com/aquilaeducation/artwork/blob/main/painting_blue.glb?raw=true#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">View in 360</a> 
-      </div>
-      </div> 
-      <div id ="ios" style="display:none">
-         <div style="float: left;"> <a rel="ar" href="https://github.com/aquilaeducation/artwork/blob/main/painting_blue.usdz?raw=true"> <img src="https://cdn.glitch.com/111e59b3-1763-4a17-8c7e-317b7588e0f4%2FARIcon.png?v=1624556468542" width="30" height="30" alt=”augmented reality shopping aquila mixed reality” > </a> </div>
-         <p style="font-family:Montserrat; font-size:12px; color:black"> </a> 
-      </div>
-      <script> var ua = navigator.userAgent.toLowerCase(); var isAndroid = ua.indexOf("android") > -1; var isiPhone = ua.indexOf("iphone") > -1; if(isAndroid) { var x = document.getElementById("android"); x.style.display = "block"; var x = document.getElementById("computer"); x.style.display = "none"; } if(isiPhone) { var x = document.getElementById("ios"); x.style.display = "block"; } </script> 
-      <div class="computerShow">
-         <p style="font-family:Montserrat; font-size:12px; color:black"> View on a mobile device to see in AR </p>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <body oncontextmenu="return false">
+      <script>
+        document.onkeydown = function(e) {if(event.keyCode == 123) { return false;}if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){return false;}if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){return false;}if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){return false;}
+      </script>
+      <script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+      ></script>
+      <script
+        nomodule=""
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+      ></script>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      />
+    </body>
+  </head>
+  
+  <body>
+    <model-viewer
+      src="https://github.com/aquilaeducation/artwork/blob/main/painting_blue.glb?raw=true"
+      alt="Augmented Reality by Aquila Mixed Reality"
+      auto-rotate=""
+      shadow-intensity="3.2"
+      shadow-softness="0.73"
+      exposure="0.8"
+      camera-controls=""
+      background-color="#ffffff"
+      ar="scene-viewer quick-look"
+      magic-leap=""
+      unstable-webxr=""
+      ar-placement="wall"
+      reveal="manual"
+      poster=""
+      ar-status="not-presenting"
+      ios-src=""
+    >
+      <button
+        slot="ar-button"
+        style="background-color: white; border-radius: 4px; border: none; position: relative; top: 16px; left: 16px; font-family: Montserrat; font-size: 12px; color: black"
+      >
+        👋 Activate AR
+      </button>
+    </model-viewer>
+    <style>
+      model-viewer {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+      }
+    </style>
+  </body>
 </html>
+
+
