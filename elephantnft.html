@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <body oncontextmenu="return false">
+      <script>
+        document.onkeydown = function(e) {if(event.keyCode == 123) { return false;}if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){return false;}if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){return false;}if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){return false;}
+      </script>
+      <script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+      ></script>
+      <script
+        nomodule=""
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+      ></script>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      />
+    </body>
+  </head>
+  
+  <body>
+    <model-viewer src="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2Felephantpicture.glb?v=1636362122166" alt="Augmented Reality by Aquila Mixed Reality" auto-rotate="" shadow-intensity="0" shadow-softness="0.2" exposure="0.8" camera-controls="" background-color="#ffffff" ar="" magic-leap="" unstable-webxr="" ar-placement="wall" poster="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2FElephant.jpg?v=1636362124100" ios-src="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2Felephantpicture.usdz?v=1636362154016" ar-status="not-presenting"
+>
+      <button
+        slot="ar-button"
+        style="background-color: white; border-radius: 4px; border: none; position: relative; top: 16px; left: 16px; font-family: Montserrat; font-size: 12px; color: black"
+      >
+        👋 Activate AR
+      </button>
+    </model-viewer>
+    <style>
+      model-viewer {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+      }
+    </style>
+  </body>
+</html>
