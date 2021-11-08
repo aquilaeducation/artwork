@@ -6,7 +6,20 @@
    </head>
    <body class="w-100 sans-serif bg-white">
       <!-- -><!-- -->
-      <model-viewer src="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2Fgiraffeimage.glb?v=1636356603866" alt="Augmented Reality by Aquila Mixed Reality" auto-rotate="" shadow-intensity="0" shadow-softness="0.2" exposure="0.8" camera-controls="" background-color="#ffffff" ar="" magic-leap="" unstable-webxr="" ar-placement="wall" poster="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2FGiraffe.jpg?v=1636356673879" ios-src="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2Fgiraffeimage.usdz?v=1636356603883" ar-status="not-presenting"> </model-viewer>
-      <style> model-viewer{ position: absolute; width:100vw; height:100vh; margin: 0 auto; } </style>
+      <model-viewer src="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2Fgiraffeimage.glb?v=1636356603866" alt="Augmented Reality by Aquila Mixed Reality" auto-rotate="" shadow-intensity="0" shadow-softness="0.2" exposure="0.8" camera-controls="" background-color="#ffffff" ar="" magic-leap="" unstable-webxr="" ar-placement="wall" poster="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2FGiraffe.jpg?v=1636356673879" ios-src="https://cdn.glitch.me/52e3a641-7112-46af-9756-95c394c58f22%2Fgiraffeimage.usdz?v=1636356603883" ar-status="not-presenting"> <button
+        slot="ar-button"
+        style="background-color: white; border-radius: 4px; border: none; position: relative; top: 16px; left: 16px; font-family: Montserrat; font-size: 12px; color: black"
+      >
+        👋 Activate AR
+      </button>
+    </model-viewer>
+    <style>
+      model-viewer {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+      }
+    </style>
    </body>
 </html>
